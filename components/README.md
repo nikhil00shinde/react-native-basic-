@@ -44,3 +44,11 @@ The bottom tab navigation means rendering the screens (or stacks of screens!) as
 With Expo Router, simply change the `Stack` in your layout file the `Tabs`.
 - Use `tabBarIcon: ({color,size}) => ()` to return the icon that you want to render, 
 - In the parent `Tabs` you can add `screenOptions={{ tabBarActiveColor: theme.colorCerulean}}`
+
+
+##### Nested Navigation
+- You can nest navigations pretty much infinitely: a stack, a stack within a tab, a tab within a stack within a screen.
+
+- Note that a common side effect of stacking navigator is that every navigator comes with a header by default so you end up with many headers. To get around this, hide the header you don't need. In our case, let's hide the header in the root index file and ensure the new header has the correct title `headerShown: false`
+
+- Increase the touchable area `Presseable component - hitSlop props`
