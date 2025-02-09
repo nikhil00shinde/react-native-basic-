@@ -37,3 +37,10 @@ There are 3 main ways to navigate between screens:
 - Modal means rendering it on top of other content. It's important to note that in order for this to work, the modal screen must be defined *above* or *adjacent* to the other screens it's being rendered on top of.
 To render a screen modally, use `presentation: "modal"` in its screen options.
 - `animation: "fade" || "flip"` to mention the modal animation
+
+##### Bottom tab navigation
+The bottom tab navigation means rendering the screens (or stacks of screens!) as bottom tabs where the tabs are always visible so you can easily switch between them.
+
+With Expo Router, simply change the `Stack` in your layout file the `Tabs`.
+- Use `tabBarIcon: ({color,size}) => ()` to return the icon that you want to render, 
+- In the parent `Tabs` you can add `screenOptions={{ tabBarActiveColor: theme.colorCerulean}}`
