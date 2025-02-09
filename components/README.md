@@ -29,6 +29,11 @@ Displaying screens in a Stack is the default way to navigate. It means that when
 
 - Ways to navigate
 There are 3 main ways to navigate between screens:
-   - Using the Link component
-   - Programmatically with the useRouter hook
+   - Using the `Link` component
+   - Programmatically with the `useRouter` hook
    - Using the built-in header and bottom tabs button
+
+##### Modal Navigation
+- Modal means rendering it on top of other content. It's important to note that in order for this to work, the modal screen must be defined *above* or *adjacent* to the other screens it's being rendered on top of.
+To render a screen modally, use `presentation: "modal"` in its screen options.
+- `animation: "fade" || "flip"` to mention the modal animation
